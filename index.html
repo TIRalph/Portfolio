@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+<div class="port">
+    <header>
+        <img src="img/RW2.png" alt="Logo R" width="50px">
+        <div class="buttons">
+            <button data-translation-key="about">Sobre</button>
+            <button data-translation-key="portfolio">Portfolio</button>
+            <button data-translation-key="contact">Contato</button>
+        </div>
+        <div class="search">
+            <input data-translation-key="searchPlaceholder" type="text" placeholder="Pesquise...">
+            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #888888;"></i>
+            <i class="fa-solid fa-gear fa-lg" id="settingsBtn"></i>
+        </div>
+        <div class="modal" id="settingsModal">
+            <div class="modal-content">
+                <h2 data-translation-key="settings">Configurações</h2>
+                <label for="languageSelect" data-translation-key="selectLanguage">Selecione o idioma:</label>
+                <select id="languageSelect">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+                <label for="themeSelect" data-translation-key="selectTheme">Selecione o tema:</label>
+                <select id="themeSelect">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+                <button onclick="applySettings()" data-translation-key="apply">Aplicar</button>
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <div class="desc">
+            <h1 data-translation-key="greeting">Oi, eu sou o <span style="color: #5105ff;">Rafael<span style="color: white;" >!👋</span></span></h1>
+            <p> Tenho 21 anos e estou na faculdade de Análise e Desenvolvimento de Sistemas. <br> Este é meu cantinho virtual, onde compartilho um pouco do que venho aprendendo e fazendo nessa jornada tecnológica. <br>
+                Estou sempre me desafiando a aprender mais sobre programação e design, e aqui você vai encontrar um pouquinho desse meu caminho. <br> Meu objetivo é aplicar o que aprendo na faculdade em projetos práticos que realmente fazem a diferença. <br>          
+                Dê uma olhada no meu portfólio e conheça um pouco mais sobre mim. <br> Se tiver alguma pergunta ou ideia para trocar, estou à disposição!         
+                Obrigado por passar por aqui e conhecer um pouco do que faço. 😊</p>
+            <button class="btn-cont">
+                <span data-translation-key="contact">Entrar em contato</span>
+            </button>
+        </div>
+        <img id="My" src="img/eu.jpg" alt="EU">
+    </div>
+</div>
+    
+</body>
+<script src="main.js"></script>
+</html>
