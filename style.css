@@ -45,12 +45,9 @@ body {
     }
 }
 
-#My {
-    animation: slideIn 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
-}
-
 .port {
     width: 1000px;
+
 }
 
 header {
@@ -181,6 +178,19 @@ input[type=text] {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.mynet {
+    animation: slideIn 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /** button **/
 
 .btn-cont {
@@ -234,3 +244,22 @@ input[type=text] {
     transform: scale(0.95);
 }
   
+/** Works **/
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.works section {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #542de2;
+    padding: 45px;
+    border-radius: 7px;
+    gap: 18px;
+    flex-direction: column;
+}
