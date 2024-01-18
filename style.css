@@ -45,16 +45,14 @@ body {
     }
 }
 
-
-
 #My {
     animation: slideIn 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
 }
 
-
 .port {
     width: 1000px;
 }
+
 header {
     animation: slideUp 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
     display: flex;
