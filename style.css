@@ -269,3 +269,53 @@ input[type=text] {
         justify-content: space-around;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .port {
+        width: 340px;
+    }
+
+    input[type=text] {
+        display: none;
+    }
+
+    .fa-magnifying-glass:before, .fa-search:before {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .port {
+        width: 300px;
+    }
+
+    input[type=text] {
+        display: none;
+    }
+
+    .fa-magnifying-glass:before, .fa-search:before {
+        display: none;
+    }
+
+    #My {
+        width: 300px;
+    }
+
+    .works {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .works section {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #542de2;
+        padding: 25px;
+        border-radius: 7px;
+        gap: 18px;
+        flex-direction: column;
+    }
+}
