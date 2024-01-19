@@ -263,3 +263,9 @@ input[type=text] {
     gap: 18px;
     flex-direction: column;
 }
+
+@media screen and (max-width: 770px) {
+    header{
+        justify-content: space-around;
+    }
+}
