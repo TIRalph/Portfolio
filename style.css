@@ -17,6 +17,11 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+.hide {
+    visibility: hidden;
+}
+
+
 /**Animate**/
 @keyframes slideIn {
     0% {
@@ -51,7 +56,6 @@ body {
 }
 
 header {
-    animation: slideUp 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,7 +164,6 @@ input[type=text] {
 }
 
 .desc {
-    animation: fadeon 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -179,7 +182,6 @@ input[type=text] {
 }
 
 .mynet {
-    animation: slideIn 0.8s cubic-bezier(0.1, 0.82, 0.165, 1);
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -246,7 +248,6 @@ input[type=text] {
   
 /** Works **/
 .works {
-    animation: fadeon 0.8s cubic-bezier(0.1, 0.2, 0.165, 1);
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -265,7 +266,13 @@ input[type=text] {
     flex-direction: column;
 }
 
-@media screen and (max-width: 770px) {
+
+
+@media screen and (max-width: 1000px) {
+
+    .skill {
+        margin-left: 30px;
+    }
     header{
         justify-content: space-around;
     }
@@ -285,6 +292,10 @@ input[type=text] {
     }
 }
 @media screen and (max-width: 400px) {
+    body {
+        font-size: 13px;
+    }
+    
     .port {
         width: 250px;
     }
