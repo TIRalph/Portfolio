@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="port">
-    <header>
+    <header class="hide">
         <img src="img/RW2.png" alt="Logo R" width="50px">
         <div class="buttons">
             <button data-translation-key="about">Sobre</button>
@@ -41,17 +41,17 @@
     </header>
     <br>
     <div class="container">
-        <div class="desc">
+        <div class="desc hide">
             <h1 data-translation-key="greeting">Oi, eu sou o <span style="color: #5105ff;">Rafael<span style="color: white;" >!👋</span></span></h1>
             <p data-translation-key="desc"> Tenho 21 anos e estou na faculdade de Análise e Desenvolvimento de Sistemas. Este é meu cantinho virtual, onde compartilho um pouco do que venho aprendendo e fazendo nessa jornada tecnológica.    
                 Estou sempre me desafiando a aprender mais sobre programação e design, e aqui você vai encontrar um pouquinho desse meu caminho. Meu objetivo é aplicar o que aprendo na faculdade em projetos práticos que realmente fazem a diferença.          
                 Dê uma olhada no meu portfólio e conheça um pouco mais sobre mim. Se tiver alguma pergunta ou ideia para trocar, estou à disposição!         
                 Obrigado por passar por aqui e conhecer um pouco do que faço. 😊</p>
             <button class="btn-cont">
-                <span data-translation-key="contact">Entrar em contato</span>
+                <span data-translation-key="getcontact">Entrar em contato</span>
             </button>
         </div>
-        <div class="mynet">
+        <div class="mynet hide">
         <img id="My" src="img/eu.jpg" alt="EU">
         <div class="infos">
             <i class="fa-solid fa-location-pin fa-2xl" style="color: red;"></i>
@@ -62,8 +62,10 @@
     </div>
 </div>
 <br>
-
-<div class="works">
+<h2 class="skill hide">Minhas Habilidades:</h2>
+<br>
+<div class="works hide">
+    
 <section>
     <i class="fa-brands fa-python fa-2xl"></i>
     <h1>Python</h1>
@@ -88,4 +90,38 @@
     
 </body>
 <script src="main.js"></script>
+<script>
+function addAnimation(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('hide');
+            if (entry.target.tagName.toLowerCase() === 'header') {
+                entry.target.style.animation = 'slideUp 0.8s cubic-bezier(0.1, 0.82, 0.165, 1)';
+            } else if (entry.target.classList.contains('desc')) {
+                entry.target.style.animation = 'fadeon 0.8s cubic-bezier(0.1, 0.82, 0.165, 1)';
+            } else if (entry.target.classList.contains('mynet')) {
+                entry.target.style.animation = 'slideIn 0.8s cubic-bezier(0.1, 0.82, 0.165, 1)';
+            } else if (entry.target.classList.contains('works')) {
+                entry.target.style.animation = 'fadeon 0.8s cubic-bezier(0.1, 0.2, 0.165, 1)';
+            }else if (entry.target.classList.contains('skill')) {
+                entry.target.style.animation = 'fadeon 0.8s cubic-bezier(0.2, 0.3, 0.1, 1)';
+            }
+        }
+    });
+}
+
+
+let options = {
+    root: null, // viewport
+    rootMargin: '0px',
+    threshold: 0.8 // 80%
+};
+
+let observer = new IntersectionObserver(addAnimation, options);
+
+document.querySelectorAll('header, .desc, .mynet, .works, .skill').forEach(element => {
+    observer.observe(element);
+});
+
+</script>
 </html>
